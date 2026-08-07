@@ -157,3 +157,97 @@
     </a>
   </div>
 </header>
+
+<!-- Sticky mobile contact bar: always available on phones without opening the menu. -->
+<nav class="curesia-mobile-contact-bar" aria-label="Quick contact options">
+  <a href="tel:+917909038933" class="mobile-contact-action mobile-contact-call" aria-label="Call Curesia">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+    <span>Call</span>
+  </a>
+
+  <a
+    href="https://wa.me/917909038933?text=Hello%20Curesia%20Health%2C%20I%20would%20like%20to%20book%20an%20appointment.%20Please%20share%20the%20available%20slots."
+    class="mobile-contact-action mobile-contact-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Message Curesia on WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <span>WhatsApp</span>
+  </a>
+
+  <a
+    href="https://www.google.com/maps/dir/?api=1&amp;destination=23.3322%2C85.2817389"
+    class="mobile-contact-action mobile-contact-directions"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Get directions to Curesia"
+  >
+    <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
+    <span>Directions</span>
+  </a>
+</nav>
+
+<style>
+  .curesia-mobile-contact-bar {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    body {
+      padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .curesia-mobile-contact-bar {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding: 7px 8px calc(7px + env(safe-area-inset-bottom, 0px));
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.98);
+      border-top: 1px solid #dbe4ee;
+      box-shadow: 0 -5px 18px rgba(15, 23, 42, 0.14);
+      backdrop-filter: blur(8px);
+    }
+
+    .mobile-contact-action {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-contact-action:focus-visible {
+      outline: 3px solid #111827;
+      outline-offset: 2px;
+    }
+
+    .mobile-contact-action i {
+      font-size: 1rem;
+    }
+
+    .mobile-contact-call { background: #0477f3; }
+    .mobile-contact-whatsapp { background: #199b45; }
+    .mobile-contact-directions { background: #e45f08; }
+  }
+
+  @media (max-width: 360px) {
+    .mobile-contact-action {
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.72rem;
+    }
+  }
+</style>

@@ -1,8 +1,3 @@
-# temp-curesia
+# Curesia Blog Template Published HTML
 
-
-
-## Site runtime files
-- `site.webmanifest` contains application metadata.
-- `sw.js` provides cached navigation and asset fallback.
-- `offline.html` is used when a requested page cannot be reached.
+Upload `curesia-blog-template-published.html` to your GitHub Pages site. It includes the header/footer inline, so it can run as a single page. Keep the `assets/` folder from your Curesia site available for logo, favicon, and gallery assets.
